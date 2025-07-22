@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primera pagina web</title>
+    <style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+background: linear-gradient(135deg, #debeff 0%, #9dc1ff 100%);
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 20px;
+color: #333;
+}
+.container {
+background-color: white;
+border-radius: 20px;
+box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+width: 90%;
+max-width: 600px;
+padding: 40px;
+margin: 40px 0;
+}
+h1 {
+text-align: center;
+color: #2c3e50;
+margin-bottom: 20px;
+font-size: 2.5rem;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.intro {
+font-size: 1.2rem;
+line-height: 1.6;
+margin-bottom: 30px;
+text-align: center;
+color: #34495e;
+}
+hr {
+border: 0;
+height: 1px;
+background: linear-gradient(to right, transparent, #3498db, transparent);
+margin: 30px 0;
+}
+h2 {
+color: #2980b9;
+margin-bottom: 25px;
+text-align: center;
+font-size: 1.8rem;
+}
+.steps {
+background-color: #f8f9fa;
+border-radius: 10px;
+padding: 20px;
+margin-bottom: 30px;
+box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+}
+.steps li {
+margin-bottom: 15px;
+padding-left: 25px;
+position: relative;
+line-height: 1.5;
+font-size: 1.1rem;
+}
+.steps li:before {
+content: "➤";
+position: absolute;
+left: 0;
+color: #3498db;
+}
+.calculator {
+background: linear-gradient(to bottom, #ffffff, #f1f8ff);
+border-radius: 15px;
+padding: 30px;
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.input-group {
+margin-bottom: 20px;
+}
+label {
+display: block;
+margin-bottom: 8px;
+font-weight: bold;
+color: #2c3e50;
+font-size: 1.1rem;
+}
+input {
+width: 100%;
+padding: 15px;
+border: 2px solid #ddd;
+border-radius: 10px;
+font-size: 1.1rem;
+transition: all 0.3s;
+}
+input:focus {
+border-color: #3498db;
+box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+outline: none;
+}
+button {
+background: linear-gradient(to right, #3498db, #2980b9);
+color: white;
+border: none;
+border-radius: 10px;
+padding: 15px 25px;
+font-size: 1.2rem;
+cursor: pointer;
+width: 100%;
+margin: 15px 0;
+font-weight: bold;
+letter-spacing: 1px;
+transition: all 0.3s;
+box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+}
+button:hover {
+transform: translateY(-3px);
+box-shadow: 0 8px 20px rgba(52, 152, 219, 0.6);
+}
+button:active {
+transform: translateY(1px);
+}
+.result {
+text-align: center;
+font-size: 1.5rem;
+font-weight: bold;
+min-height: 40px;
+margin-top: 20px;
+padding: 15px;
+border-radius: 10px;
+background-color: #e8f4fc;
+color: #2c3e50;
+border: 2px dashed #3498db;
+transition: all 0.4s;
+}
+.highlight {
+background-color: #fffacd;
+padding: 2px 5px;
+border-radius: 4px;
+}
+.explanation {
+margin-top: 30px;
+padding: 20px;
+background-color: #f0f7ff;
+border-radius: 10px;
+border-left: 5px solid #3498db;
+}
+.explanation h3 {
+color: #2980b9;
+margin-bottom: 15px;
+}
+.explanation p {
+margin-bottom: 15px;
+line-height: 1.6;
+}
+.code {
+background-color: #2c3e50;
+color: #ecf0f1;
+padding: 15px;
+border-radius: 8px;
+font-family: monospace;
+font-size: 1rem;
+margin: 15px 0;
+overflow-x: auto;
+}
+footer {
+text-align: center;
+margin-top: 30px;
+color: #7f8c8d;
+font-size: 0.9rem;
+}
+@media (max-width: 480px) {
+.container {
+padding: 25px;
+}
+h1 {
+font-size: 2rem;
+}
+h2 {
+font-size: 1.5rem;
+}
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Esta es mi primera página web</h1>
+<p class="intro">¡Qué emoción! Me da crear mi primera página web, espero que sea la primera de muchas.
+</p>
+<hr>
+<h2>Vamos a aprender JavaScript</h2>
+<div class="steps">
+<ul>
+<li><strong>Primero</strong> probaremos haciendo una suma</li>
+<li><strong>Ingrese un número</strong></li>
+<li><strong>Calcular suma</strong></li>
+<li><strong>Ingrese otro número</strong></li>
+</ul>
+</div>
+<div class="calculator">
+<div class="input-group">
+<label for="numero1">Ingrese el primer número:</label>
+<input type="number" id="numero1" placeholder="Escribe un número...">
+</div>
+<div class="input-group">
+<label for="numero2">Ingrese el segundo número:</label>
+<input type="number" id="numero2" placeholder="Escribe otro número...">
+</div>
+<button id="calcular">Calcular Suma</button>
+<div class="result" id="resultado">
+¡El resultado aparecerá aquí!
+</div>
+</div>
+<div class="explanation">
+<h3>¿Cómo funciona el JavaScript?</h3>
+<p>Hemos utilizado JavaScript para hacer interactiva la calculadora:</p>
+<div class="code">
+// 1. Obtener elementos del DOM<br>
+const num1Input = document.getElementById('numero1');<br>
+const num2Input = document.getElementById('numero2');<br>
+const calcularBtn = document.getElementById('calcular');<br>
+const resultadoDiv = document.getElementById('resultado');<br><br>
+// 2. Agregar evento al botón<br>
+calcularBtn.addEventListener('click', function() {<br>
+&nbsp;&nbsp;// 3. Obtener los valores de los inputs<br>
+&nbsp;&nbsp;const num1 = parseFloat(num1Input.value) || 0;<br>
+&nbsp;&nbsp;const num2 = parseFloat(num2Input.value) || 0;<br><br>
+&nbsp;&nbsp;// 4. Calcular la suma<br>
+&nbsp;&nbsp;const suma = num1 + num2;<br><br>
+&nbsp;&nbsp;// 5. Mostrar el resultado<br>
+&nbsp;&nbsp;resultadoDiv.innerHTML = `<span class="highlight">${num1}</span> + <span class="highlight">${num2}</span> = <span class="highlight">${suma}</span>`;<br>
+});
+</div>
+<p>Este código realiza lo siguiente:</p>
+<ul>
+<li>Captura los elementos HTML usando sus IDs</li>
+<li>Escucha el evento de clic en el botón "Calcular Suma"</li>
+<li>Obtiene los valores de los inputs y los convierte a números</li>
+<li>Calcula la suma de ambos números</li>
+<li>Muestra el resultado en el div de resultados con formato especial</li>
+</ul>
+</div>
+<footer>
+Mi primera página web con JavaScript - ¡Sigue aprendiendo!
+</footer>
+</div>
+<script>
+// Esperar a que el DOM esté completamente cargado
+document.addEventListener('DOMContentLoaded', function() {
+// Obtener elementos del DOM
+const num1Input = document.getElementById('numero1');
+const num2Input = document.getElementById('numero2');
+const calcularBtn = document.getElementById('calcular');
+const resultadoDiv = document.getElementById('resultado');
+// Agregar evento al botón
+calcularBtn.addEventListener('click', function() {
+// Obtener los valores de los inputs y convertirlos a números
+// Si no es un número válido, usar 0
+const num1 = parseFloat(num1Input.value) || 0;
+const num2 = parseFloat(num2Input.value) || 0;
+// Calcular la suma
+const suma = num1 + num2;
+// Mostrar el resultado con formato especial
+resultadoDiv.innerHTML = `<span class="highlight">${num1}</span> + <span class="highlight">${num2}</span> = <span class="highlight">${suma}</span>`;
+// Animación para el resultado
+resultadoDiv.style.transform = 'scale(1.05)';
+setTimeout(() => {
+resultadoDiv.style.transform = 'scale(1)';
+}, 300);
+});
+// Permitir calcular presionando Enter en cualquier campo
+[num1Input, num2Input].forEach(input => {
+input.addEventListener('keypress', function(e) {
+if (e.key === 'Enter') {
+calcularBtn.click();
+}
+});
+});
+});
+</script>
+<script src="miprimerapaginaweb.js" type="text/javascript"></script>
+
+</body>
+</html>
